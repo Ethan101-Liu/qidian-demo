@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0c10">
+  <meta name="description" content="总有一个世界，让你舍不得离开。探索起点的故事世界，遇见你的下一本书。非官方互动设计演示。">
+  <title>起点 · 总有一个世界</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23e5273b'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='23' fill='white'%3E起%3C/text%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="assets/character/intro-film-poster.png">
+  <link rel="preload" as="image" href="assets/cursor/ink-book-atlas.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="opening-config.js" defer></script>
+  <script src="opening-video.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="cursor.js" defer></script>
+</head>
+<body>
+  <a class="access-skip" href="#explore">跳到题材探索</a>
+  <header class="nav intro-hidden" inert aria-hidden="true">
+    <a class="brand" href="#hero" aria-label="起点中文网 · 首页"><img src="assets/logo.png" alt="起点中文网"></a>
+    <nav aria-label="页面导航"><a href="#explore">探索题材</a><a href="#selected">精选作品</a><a href="#app">起点读书</a></nav>
+    <button class="button button-small download">下载 App <span aria-hidden="true">↗</span></button>
+    <div class="page-progress" aria-hidden="true"></div>
+  </header>
+  <section id="opening" class="opening" aria-label="滚动进入故事世界">
+    <div class="opening-sticky">
+      <img class="opening-poster" src="assets/character/intro-film-poster.png" alt="白衣剑仙背立晨曦云海之巅，黑发与广袖随风飘扬">
+      <video class="opening-film" muted playsinline preload="auto" aria-hidden="true"></video>
+      <div class="opening-shade"></div>
+      <div class="ink-transition"></div>
+      <div class="opening-bottom"><span class="scroll-cue"><i></i> 向下滚动 · 进入故事</span><button class="skip-intro">跳过开场 <span aria-hidden="true">↘</span></button></div>
+    </div>
+  </section>
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-backdrop"></div><div class="hero-vignette"></div>
+      <div class="hero-copy"><span class="eyebrow">起点中文网 · 每一种热爱，都有故事回应</span><h1>总有一个世界，<br>让你<span>舍不得离开。</span></h1><p>找到你想看的故事。</p><div class="hero-actions"><a href="#explore" class="button">探索故事 <span aria-hidden="true">↗</span></a><button class="button button-ghost download">下载起点读书</button></div></div>
+      <div class="book-stage" aria-label="精选作品书封"></div>
+      <div class="hero-foot"><span>从一页开始，走得比想象更远。</span><a href="#explore">探索万千世界 <span aria-hidden="true">↓</span></a><span>SCROLL TO DISCOVER</span></div>
+    </section>
+    <section id="explore" class="explore section-shell">
+      <div class="section-heading reveal"><div><span class="eyebrow">01 / 探索题材</span><h2>你的热爱，<br>自成一个世界。</h2></div><p>想去远方，还是回到日常？<br>选择一种题材，让故事带你出发。</p></div>
+      <div class="genre-controls reveal"><div class="genre-tabs" role="tablist" aria-label="故事题材"></div><button class="more-genres" aria-expanded="false" aria-controls="extra-genres">更多题材 <span aria-hidden="true">＋</span></button></div>
+      <div id="extra-genres" class="extra-genres" role="tablist" aria-label="更多故事题材" hidden></div>
+      <div class="world-panel reveal" id="world-panel" role="tabpanel" tabindex="0"><div class="world-image world-image-a"></div><div class="world-image world-image-b"></div><div class="world-shade"></div><div class="world-content"><span class="world-label"></span><h3 class="world-title"></h3><p class="world-description"></p><div class="world-tags"></div><div class="world-index" aria-hidden="true"></div></div><div class="world-books"></div><span class="world-note">题材氛围创作 · 非作品官方插图</span></div>
+    </section>
+    <section id="selected" class="selected section-shell">
+      <div class="section-heading reveal"><div><span class="eyebrow">02 / 精选作品</span><h2>从兴趣，<br>到你的下一本书。</h2></div><p>每一本书，都是一扇门。<br>轻触书封，先认识这个世界。</p></div>
+      <div class="selected-grid reveal"></div>
+    </section>
+    <section id="app" class="app-section section-shell">
+      <div class="app-layout"><div class="app-copy reveal"><span class="eyebrow">03 / 起点读书</span><h2>把故事，<br>带在身边。</h2><p class="app-lead">看神作，上起点。<br>从发现好书，到沉浸阅读，<br>让每一段空闲都有故事相伴。</p><div class="app-tabs" role="tablist" aria-label="App 体验"><button role="tab" aria-selected="true" aria-controls="app-feature" id="app-tab-discover" data-app="discover">发现好书</button><button role="tab" aria-selected="false" aria-controls="app-feature" id="app-tab-read" data-app="read" tabindex="-1">阅读体验</button></div><div id="app-feature" role="tabpanel" aria-labelledby="app-tab-discover"><h3></h3><p></p></div><button class="button download">下载起点读书 <span aria-hidden="true">↗</span></button></div><div class="app-art reveal"><div class="app-orbit" aria-hidden="true"></div><img src="assets/app/official-app.png" alt="起点读书官方展示：书架、作品发现与作品详情界面" loading="lazy"><div class="app-screen-pair" hidden><img src="assets/app/read-community.webp" alt="起点读书 App Store 官方截图：阅读中的本章说界面" loading="lazy"><img src="assets/app/read-audio.webp" alt="起点读书 App Store 官方截图：青山真人有声作品与目录界面" loading="lazy"></div><span class="app-art-caption">起点读书官方展示素材</span></div></div>
+    </section>
+    <section class="closing"><div class="closing-glow" aria-hidden="true"></div><span class="eyebrow reveal">未完，待你续读</span><h2 class="reveal">下一段故事，<br>从这里开始。</h2><button class="button download reveal">下载起点读书 <span aria-hidden="true">↗</span></button><a class="back-top" href="#hero">回到故事起点 ↑</a></section>
+  </main>
+  <footer><span>起点中文网 · 起点读书</span><span>非官方设计演示。下载按钮仅展示交互效果。</span><span>为每一种想象，留一个起点。</span></footer>
+  <dialog class="book-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="关闭作品简介">×</button><div class="dialog-book"></div><div class="dialog-info"><span class="eyebrow">走进一个新故事</span><h2 id="dialog-title"></h2><p class="dialog-meta"></p><div class="dialog-tags"></div><p class="dialog-description"></p><span class="dialog-note">作品介绍展示 · 本页不提供章节阅读</span></div></dialog>
+  <noscript><div class="noscript-message">请开启 JavaScript 体验题材切换和滚动动画。页面文字与页内导航仍可浏览。</div></noscript>
+</body>
+</html>
