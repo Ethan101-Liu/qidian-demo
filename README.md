@@ -32,7 +32,7 @@ node serve.mjs
 1. 在 Settings → Pages 选择从 `main` 分支的根目录发布；`.nojekyll` 已包含。
 2. 在 Settings → Pages 选择 GitHub Actions，使用附带的 `.github/workflows/pages.yml`；工作流仅打包页面与静态素材。
 
-所有站点资源使用相对路径，可部署到 `https://用户名.github.io/仓库名/` 子目录。当前只是本地版本，尚未创建或公开 GitHub 仓库，也未部署。
+所有站点资源使用相对路径，可部署到 `https://用户名.github.io/仓库名/` 子目录。已发布到公开仓库 [Ethan101-Liu/qidian-demo](https://github.com/Ethan101-Liu/qidian-demo)，在线测试地址：[GitHub Pages](https://ethan101-liu.github.io/qidian-demo/)。`main` 分支更新后由 GitHub Actions 自动部署。
 
 工作流依据 [GitHub Pages 官方文档](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) 配置。
 
